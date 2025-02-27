@@ -1,0 +1,765 @@
+<!DOCTYPE html> 
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--网站标题-->
+    <title>萌哥坑坑哒 - MengGe_KKD</title>
+
+    <!--Font Awesome素材库-->>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    
+    <!--网站图标-->
+    <!-- 基础favicon -->
+    <link rel="icon" type="image/x-icon" href="/favicon/favicon.ico">
+    
+    <!-- Apple设备图标 -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
+    
+    <!-- Android和现代浏览器图标 -->
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
+    
+    <!-- Web应用清单文件（可选，用于PWA） -->
+    <link rel="manifest" href="/site.webmanifest">
+    
+    <!-- 主题颜色 -->
+    <meta name="theme-color" content="#266980">
+    
+    <style>
+        /* 基础样式 */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: #eeeeee;
+            background-color: #151515;
+        }
+        
+        a {
+            text-decoration: none;
+            color: #266980;
+        }
+        
+        /* 导航栏 */
+        :root {
+            --header-height: 80px; /* 增加页眉高度 */
+            --container-padding: 5%; /* 两侧留白 */
+        }
+        .site-header {
+            position: fixed;
+            top: 0;
+            background: #0f0f0f;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            width: 100%;
+            z-index: 1000;
+            height: var(--header-height);
+        }
+
+        .site-header .container {
+            height: 100%;
+            max-width: 1400px; /* 增加最大宽度 */
+            margin: 0 auto;
+            padding: 0 var(--container-padding);
+        }
+
+        /* 主导航样式 */
+        .main-nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 100%;
+            gap: 2rem; /* Logo和导航之间的间距 */
+        }
+
+        /* 左侧Logo样式 */
+        .nav-left {
+            flex-shrink: 0;
+        }
+
+        .site-logo {
+            display: flex;
+            align-items: center;
+        }
+
+        .site-logo img {
+            height: 40px;
+            width: auto;
+            max-width: 140px;
+            object-fit: contain;
+        }
+
+        /* 中间导航菜单样式 */
+        .nav-center {
+            flex-grow: 1;
+            display: flex;
+            justify-content: center;
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+            margin: 0;
+            padding: 0;
+        }
+
+        .nav-menu a {
+            text-decoration: none;
+            color: var(--text-color);
+            font-weight: 500;
+            padding: 0.5rem;
+            transition: color 0.3s ease;
+        }
+
+        .nav-menu a:hover,
+        .nav-menu a.active {
+            color: var(--accent-color);
+        }
+
+        /* 下拉菜单样式 */
+        .dropdown {
+            position: relative;
+        }
+
+        .dropdown-toggle::after {
+            content: '▼';
+            font-size: 0.8em;
+            margin-left: 0.5em;
+        }
+
+        .dropdown-menu {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background: #151515;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            border-radius: 4px;
+            padding: 0.5rem 0;
+            min-width: 150px;
+            list-style: none;
+        }
+
+        .dropdown:hover .dropdown-menu {
+            display: block;
+        }
+
+        .dropdown-menu a {
+            display: block;
+            padding: 0.5rem 1rem;
+            color: var(--text-color);
+            text-decoration: none;
+        }
+
+        .dropdown-menu a:hover {
+            background-color: #f5f5f5;
+        }
+
+        /* 右侧社交媒体和支持按钮样式 */
+        .nav-right {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+        }
+
+        .social-icons {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .social-icons a {
+            color: var(--text-color);
+            font-size: 1.2rem;
+            transition: color 0.3s ease;
+        }
+
+        .social-icons a:hover {
+            color: var(--accent-color);
+        }
+
+        .support-btn {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.5rem 1rem;
+            background-color: var(--accent-color);
+            color: #266980;
+            text-decoration: none;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            transition: background-color 0.3s ease;
+        }
+
+        .support-btn i {
+            font-size: 0.9rem;
+        }
+
+        .support-btn:hover {
+            background-color: var(--primary-color);
+        }
+
+        /* 移动端菜单按钮 */
+        .menu-toggle {
+            display: none;
+        }
+
+        /* 响应式设计 */
+        @media (max-width: 1024px) {
+            .nav-center {
+                justify-content: flex-start;
+            }
+    
+            .nav-menu {
+                gap: 1rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav-center, 
+            .nav-right {
+                display: none;
+            }
+
+            .menu-toggle {
+                display: flex;
+                flex-direction: column;
+                gap: 6px;
+                background: none;
+                border: none;
+                cursor: pointer;
+                padding: 0.5rem;
+            }
+
+            .menu-toggle span {
+                display: block;
+                width: 25px;
+                height: 2px;
+                background-color: var(--primary-color);
+                transition: 0.3s;
+            }
+
+            /* 移动端菜单展开时的样式 */
+            .nav-center.active,
+            .nav-right.active {
+                display: flex;
+                flex-direction: column;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: #0f0f0f;
+                padding: 1rem;
+                box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            }
+
+            .nav-menu {
+                flex-direction: column;
+                width: 100%;
+            }
+
+            .nav-right {
+                flex-direction: column;
+                align-items: flex-start;
+                padding: 1rem;
+            }
+
+            .social-icons {
+                width: 100%;
+                justify-content: center;
+            }
+
+            .support-btn {
+                width: 100%;
+                justify-content: center;
+            }
+        }
+        
+        /* 主页部分 */
+        .hero {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 0 2rem;
+            background-color: #151515;
+            margin-top: 70px;
+        }
+        
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+        
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 600px;
+            margin-bottom: 2rem;
+        }
+        
+        .btn {
+            display: inline-block;
+            background-color: #266980;
+            color: #eeeeee;
+            padding: 0.8rem 1.8rem;
+            border-radius: 5px;
+            font-weight: 500;
+            transition: background-color 0.3s ease;
+        }
+        
+        .btn:hover {
+            background-color: #255560;
+        }
+        
+        /* 作品集部分 */
+        .portfolio {
+            padding: 5rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 1rem;
+            font-size: 2rem;
+        }
+        
+        .works-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        
+        .work-item {
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+            background-color: #0f0f0f;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .work-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+        }
+        
+        .work-image {
+            height: 200px;
+            background-color: #000000;
+            background-size: cover;
+            background-position: center;
+        }
+        
+        .work-info {
+            padding: 1.5rem;
+        }
+        
+        .work-title {
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .work-category {
+            color: #eeeeee;
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+        }
+        
+        /* 关于我部分 */
+        .about {
+            padding: 5rem 2rem;
+            background-color: #151515;
+        }
+        
+        .about-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .about-content img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 2rem;
+            display: block;
+            margin: 0 auto 2rem;
+            border: 5px solid #000000;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        /* 联系部分 */
+        .contact {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 5rem 2rem;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .contact p {
+            font-size: 1.2rem;
+            max-width: 600px;
+            margin-bottom: 2rem;
+        } 
+        
+        form {
+            display: grid;
+            gap: 1.5rem;
+        }
+        
+        .form-group {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        label {
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+        }
+        
+        input, textarea {
+            padding: 0.8rem;
+            border: 1px solid #a0a0a0;
+            border-radius: 5px;
+            font-family: inherit;
+        }
+        
+        /* 页脚 */
+        footer {
+            background-color: #0f0f0f;
+            color: #eeeeee;
+            padding: 2rem 0;
+            margin-top: 4rem;
+        }
+
+        .footer-content {
+            text-align: center;
+        }
+
+        .social-links {
+            margin-bottom: 1.5rem;
+        }
+
+        .social-links a {
+            color: #eeeeee;
+            font-size: 1.5rem;
+            margin: 0 0.5rem;
+            transition: color 0.3s ease;
+        }
+
+        .social-links a:hover {
+            color: #266980;
+        }
+
+        .copyright {
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+        
+        /* 响应式设计 */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.5rem;
+            }
+            
+            .hero p {
+                font-size: 1rem;
+            }
+            
+            .nav-links {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- 导航栏 -->
+    <header class="site-header">
+        <div class="container">
+            <nav class="main-nav">
+                <!-- 左侧Logo -->
+                <div class="nav-left">
+                    <a href="index.html" class="site-logo">
+                        <img src="images/logo.png" alt="MengGe Logo">
+                    </a>
+                </div>
+    
+                <!-- 中间导航菜单 -->
+                <div class="nav-center">
+                    <ul class="nav-menu">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#portfolio">Works</a></li>
+                        <li><a href="https://menggekkd.gumroad.com/">Assets</a></li>
+                        <li><a href="https://vgen.co/mengge_kkd">Commission</a></li>
+                        <li><a href="https://github.com/menggekkd/Mengmoji">Mengmoji</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+    
+                <!-- 右侧社交媒体和支持按钮 -->
+                <div class="nav-right">
+                    <div class="social-icons">
+                        <a href="https://youtube.com/@MengGe_KKD" target="_blank" title="YouTube">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                        <a href="https://twitter.com/menggekkd" target="_blank" title="Twitter">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                    </div>
+                    <a href="https://patreon.com/MengGe_KKD" class="support-btn">
+                        <i class="fas fa-heart"></i>
+                        Support Me
+                    </a>
+                </div>
+    
+                <!-- 移动端菜单按钮 -->
+                <button class="menu-toggle" aria-label="Toggle Menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- 主页部分 -->
+    <section id="home" class="hero">
+        <h1>Hey! my name is <span class="highlight">萌哥坑坑哒</span></h1>
+        <p>I'm a 2D&3D artist, YouTuber from China.</p>
+        <div class="social-links">
+            <a href="https://youtube.com/@MengGe_KKD" target="_blank"><i class="fab fa-youtube"></i></a>
+            <a href="https://space.bilibili.com/110871903" target="_blank"><i class="fab fa-bilibili"></i></a>
+            <a href="https://pixiv.net/users/70363431" target="_blank"><i class="fab fa-pixiv"></i></a>
+            <a href="https://artstation.com/mengge_kkd" target="_blank"><i class="fab fa-artstation"></i></a>
+            <a href="https://twitter.com/MengGekkd" target="_blank"><i class="fab fa-twitter"></i></a>
+            <a href="https://bsky.app/profile/menggekkd.bsky.social" target="_blank"><i class="fab fa-bluesky"></i></a>
+            <a href="https://patreon.com/MengGe_KKD" target="_blank"><i class="fab fa-patreon"></i></a>
+            <a href="https://github.com/menggekkd" target="_blank"><i class="fab fa-github"></i></a>
+        </div>
+        <script type='text/javascript' src='https://storage.ko-fi.com/cdn/widget/Widget_2.js'></script><script type='text/javascript'>kofiwidget2.init('Support me on Ko-fi', '#266980', 'E1E1OR07H');kofiwidget2.draw();</script> 
+        <p></p>
+        <a href="#portfolio" class="btn">My works</a>
+    </section>
+
+    <!-- 关于我部分 -->
+    <section id="about" class="about">
+        <h2 class="section-title">About me</h2>
+        <div class="about-content">
+            <img src="/image/icon.png" alt="萌哥坑坑哒">
+            <p>萌哥坑坑哒 (MengGe_KKD) is a 2D and 3D Freelance Artist, YouTuber from China.</p>
+            <p>You can call me 萌哥 (MengGe) or Cian [/siːən/].</p>
+            <p>I use Blender, CLIP STUDIO PAINT to create my work.</p>
+        </div>
+    </section>
+
+    <!-- 作品集部分 -->
+    <section id="portfolio" class="portfolio">
+        <h2 class="section-title">MengGe's works</h2>
+        <div class="works-grid">
+            <!-- 作品项目1 -->
+            <a href="https://youtube.com/watch?v=aQeS11u-OvQ" style="color: #eeeeee">
+                <div class="work-item">
+                    <div class="work-image" style="background-image: url('https://cdnb.artstation.com/p/assets/covers/images/084/957/197/smaller_square/-image.jpg?1739606143')"></div>
+                    <div class="work-info">
+                        <h3 class="work-title">Cool Mita 🐇 🕳</h3>
+                        <p class="work-category">Animation</p>
+                        <p>Cute little animation using After Effice and Illustrator</p>
+                    </div>
+                </div>
+            </a>
+            
+            <!-- 作品项目2 -->
+            <a href="https://github.com/menggekkd/Mengmoji" style="color: #eeeeee">
+                <div class="work-item">
+                    <div class="work-image" style="background-image: url('https://cdna.artstation.com/p/assets/covers/images/085/262/334/smaller_square/-mengmoji-v-1-0-0-2.jpg?1740392110')"></div>
+                    <div class="work-info">
+                        <h3 class="work-title">Mengmoji</h3>
+                        <p class="work-category">Assets</p>
+                        <p>Using simple gradients and basic borderless geometric shapes to make them cute</p>
+                    </div>
+                </div>
+            </a>
+            
+            <!-- 作品项目3 -->
+            <a href="https://pixiv.net/artworks/125512454" style="color: #eeeeee">
+                <div class="work-item">
+                    <div class="work-image" style="background-image: url('https://cdna.artstation.com/p/assets/images/images/083/190/842/large/-christmas-gift-x0-75.jpg?1735071208')"></div>
+                    <div class="work-info">
+                        <h3 class="work-title">2024 Christmas~</h3>
+                        <p class="work-category">Illustration</p>
+                        <p>Miku and Ame spend Christmas together.</p>
+                    </div>
+                </div>
+            </a>
+            
+            <!-- 作品项目4 -->
+            <a href="https://pixiv.net/artworks/125111825" style="color: #eeeeee">
+                <div class="work-item">
+                    <div class="work-image" style="background-image: url('https://cdna.artstation.com/p/assets/images/images/082/807/164/large/-image-0-75x.jpg?1733959207')"></div>
+                    <div class="work-info">
+                        <h3 class="work-title">Glutina</h3>
+                        <p class="work-category">Illustration</p>
+                        <p>Slime Girl from BK</p>
+                    </div>
+                </div>
+            </a>
+            
+            <!-- 作品项目5 -->
+            <a href="https://youtu.be/4iPXvY0JHWs?si=GKN59r2N5xoSJ7U-" style="color: #eeeeee">
+                <div class="work-item">
+                    <div class="work-image" style="background-image: url('https://i.ytimg.com/vi/4iPXvY0JHWs/hqdefault.jpg?sqp=-oaymwEXCOADEI4CSFryq4qpAwkIARUAAIhCGAE=&rs=AOn4CLDnnzaGJ4aEln1VkAz76DB35zs8Og')"></div>
+                    <div class="work-info">
+                        <h3 class="work-title">KAngel dances to Doodle Dance</h3>
+                        <p class="work-category">3D animation</p>
+                        <p>Small anime-style looping animation using Blender</p>
+                    </div>
+                </div>
+            </a>
+            
+            <!-- 作品项目6 -->
+            <a href="https://menggekkd.itch.io/pomni-3d-model" style="color: #eeeeee">
+                <div class="work-item">
+                    <div class="work-image" style="background-image: url('https://cdna.artstation.com/p/assets/images/images/084/067/404/large/-pomni.jpg?1737469549')"></div>
+                    <div class="work-info">
+                        <h3 class="work-title">Blender 3D｜Pomni 3D Model</h3>
+                        <p class="work-category">Assets</p>
+                        <p>3D model of a character from GLITCH's the animated series The Amazing Digiral Circus using Blender.</p>
+                    </div>
+                </div>
+                <!-- 作品项目7 -->
+            <a href="https://pixiv.net/artworks/121878135" style="color: #eeeeee">
+                <div class="work-item">
+                    <div class="work-image" style="background-image: url('https://cdna.artstation.com/p/assets/images/images/079/367/394/large/mengge_kkd-1.jpg?1724732993')"></div>
+                    <div class="work-info">
+                        <h3 class="work-title">Uzi~</h3>
+                        <p class="work-category">Illustration</p>
+                        <p>Fan Art about GLITCH's Murder Drones Character Uzi</p>
+                    </div>
+                </div>
+                <!-- 作品项目8 -->
+            <a href="https://pixiv.net/artworks/122326671" style="color: #eeeeee">
+                <div class="work-item">
+                    <div class="work-image" style="background-image: url('https://cdnb.artstation.com/p/assets/images/images/079/851/495/large/mengge_kkd-one-shot-light-2-1.jpg?1725989624')"></div>
+                    <div class="work-info">
+                        <h3 class="work-title">Niko & The sun</h3>
+                        <p class="work-category">Illustration</p>
+                        <p>Fan Art about OneShot Character Niko</p>
+                    </div>
+                </div>
+                <!-- 作品项目9 -->
+            <a href="https://menggekkd.itch.io/unity3d-the-room" style="color: #eeeeee">
+                <div class="work-item">
+                    <div class="work-image" style="background-image: url('https://cdna.artstation.com/p/assets/images/images/072/802/160/large/mengge_kkd-slide-16-9-1-2.jpg?1708249931')"></div>
+                    <div class="work-info">
+                        <h3 class="work-title">Unity 3D｜The room</h3>
+                        <p class="work-category">Unity</p>
+                        <p>Projects made with Unity</p>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </section>
+
+    <!-- 联系部分 -->
+    <section id="contact" class="contact">
+        <h2 class="section-title">Contact me?</h2>
+        <p align="center">Have something to say to me? You can use your Email or join my Discord Channel!</p>
+        <p align="center">My Email: <a href="mailto:menggekkd@gmail.com">menggekkd@gmail.com</a></p>
+        <a href="https://discord.com/invite/CEmCSAFAVE" class="btn">Join my Discord channel</a>
+    </section>
+
+    <!-- 页脚 -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="social-links">
+                    <a href="https://youtube.com/@MengGe_KKD" target="_blank"><i class="fab fa-youtube"></i></a>
+                    <a href="https://space.bilibili.com/110871903" target="_blank"><i class="fab fa-bilibili"></i></a>
+                    <a href="https://pixiv.net/users/70363431" target="_blank"><i class="fab fa-pixiv"></i></a>
+                    <a href="https://artstation.com/mengge_kkd" target="_blank"><i class="fab fa-artstation"></i></a>
+                    <a href="https://twitter.com/MengGekkd" target="_blank"><i class="fab fa-twitter"></i></a>
+                    <a href="https://bsky.app/profile/menggekkd.bsky.social" target="_blank"><i class="fab fa-bluesky"></i></a>
+                    <a href="https://patreon.com/MengGe_KKD" target="_blank"><i class="fab fa-patreon"></i></a>
+                    <a href="https://github.com/menggekkd" target="_blank"><i class="fab fa-github"></i></a>
+                </div>
+                <p class="copyright">&copy; 2025 萌哥坑坑哒 | Made wich Claude | Power by GitHub Page</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        // 平滑滚动
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+        
+        // 简单的表单处理
+        document.getElementById('contact-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('感谢您的留言！在实际网站中，这里会连接到后端处理程序。');
+            this.reset();
+        });
+        // 移动端菜单切换
+        document.addEventListener('DOMContentLoaded', () => {
+            const menuToggle = document.querySelector('.menu-toggle');
+            const navCenter = document.querySelector('.nav-center');
+            const navRight = document.querySelector('.nav-right');
+
+            menuToggle?.addEventListener('click', () => {
+                navCenter?.classList.toggle('active');
+                navRight?.classList.toggle('active');
+            });
+
+            // 点击菜单外区域关闭菜单
+            document.addEventListener('click', (e) => {
+                if (!e.target.closest('.site-header')) {
+                    navCenter?.classList.remove('active');
+                    navRight?.classList.remove('active');
+                }
+            });
+
+            // 处理dropdown菜单在移动端的点击事件
+            const dropdownToggles = document.querySelectorAll('.dropdown-toggle');
+            dropdownToggles.forEach(toggle => {
+                toggle.addEventListener('click', (e) => {
+                    if (window.innerWidth <= 768) {
+                        e.preventDefault();
+                        const dropdown = toggle.closest('.dropdown');
+                        dropdown?.classList.toggle('active');
+                    }
+                });
+            });
+        });
+
+        // 滚动时添加阴影效果
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('.site-header');
+            if (window.scrollY > 0) {
+                header?.classList.add('scrolled');
+            } else {
+                header?.classList.remove('scrolled');
+            }
+});
+    </script>
+</body>
+</html>
