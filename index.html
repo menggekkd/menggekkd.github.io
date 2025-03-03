@@ -294,6 +294,16 @@
             padding: 0 2rem;
             background-color: #151515;
             margin-top: 70px;
+            /* 页面背景 */
+            position: relative;
+            background-image: url('https://github.com/menggekkd/menggekkd.github.io/blob/main/image/background.png?raw=true');
+            background-size: cover; /* 让背景图覆盖整个容器 */
+            background-position: center; /* 背景图居中 */
+            background-attachment: fixed; /* 固定背景，滚动时不移动 */
+            background-color: rgba(0, 0, 0, 0.5); /* 为背景图添加一个半透明的颜色覆盖层 */
+            color: white; /* 文字颜色 */
+            padding: 50px 0; /* 设置内边距 */
+            height: 400px; /* 可以根据需要调整高度 */
         }
         
         h1 {
@@ -305,8 +315,14 @@
             font-size: 1.2rem;
             max-width: 600px;
             margin-bottom: 2rem;
-        }
         
+        /* 可选：可以设置文本内容的样式 */
+        .section-with-background h1 {
+          text-align: center;
+          font-size: 2rem;
+        }
+
+        /* 按钮 */
         .btn {
             display: inline-block;
             background-color: #266980;
