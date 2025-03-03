@@ -313,24 +313,42 @@
           right: 0;
           bottom: 0;
           background-color: rgba(0, 0, 0, 0.5); /* 半透明黑色层 */
-          z-index: 1; /* 确保覆盖层在图片之上 */
+          z-index: 1;
         }
         
         .hero h1 {
           position: relative;
-          z-index: 2; /* 文字内容位于覆盖层之上 */
+          z-index: 2;
           color: white;
           font-size: 3rem;
           margin-bottom: 1rem;
           text-align: center;
         }
 
+        .hero btn {
+            display: inline-block;
+            background-color: #266980;
+            color: #eeeeee;
+            padding: 0.8rem 1.8rem;
+            border-radius: 5px;
+            font-weight: 500;
+            transition: background-color 0.3s ease;
+            z-index: 2;
+        }
+        
+        .hero btn:hover {
+            background-color: #255560;
+            z-index: 2;
+        }
+
         .hero p {
             font-size: 1.2rem;
             max-width: 600px;
             margin-bottom: 2rem;
+            z-index: 2;
         }
-        
+
+        /* h1标题 */
         h1 {
             font-size: 3rem;
             margin-bottom: 1rem;
