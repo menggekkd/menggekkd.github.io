@@ -91,8 +91,8 @@
         }
 
         .site-logo img {
-            height: 40px;
-            width: auto;
+            height: auto;
+            width: 55;
             max-width: 140px;
             object-fit: contain;
         }
@@ -306,23 +306,23 @@
         }
         
         .hero::before {
-          content: ''; /* 创建伪元素 */
-          position: absolute;
-          top: 0;
-          left: 0;
-          right: 0;
-          bottom: 0;
-          background-color: rgba(0, 0, 0, 0.5); /* 半透明黑色层 */
-          z-index: 1;
+            content: ''; /* 创建伪元素 */
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0, 0, 0, 0.7); /* 半透明黑色层 */
+            z-index: 1;
         }
         
         .hero h1 {
-          position: relative;
-          z-index: 2;
-          color: white;
-          font-size: 3rem;
-          margin-bottom: 1rem;
-          text-align: center;
+            position: relative;
+            color: white;
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            text-align: center;
+            z-index: 2;
         }
 
         .hero-btn {
@@ -350,6 +350,7 @@
         
         .hero-social-links {
             margin-bottom: 1.5rem;
+            z-index: 2;
         }
         
         .hero-social-links a {
