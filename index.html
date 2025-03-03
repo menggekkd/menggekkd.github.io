@@ -325,7 +325,7 @@
           text-align: center;
         }
 
-        .hero btn {
+        .hero-btn {
             display: inline-block;
             background-color: #266980;
             color: #eeeeee;
@@ -336,7 +336,7 @@
             z-index: 2;
         }
         
-        .hero btn:hover {
+        .hero-btn:hover {
             background-color: #255560;
             z-index: 2;
         }
@@ -348,12 +348,18 @@
             z-index: 2;
         }
         
-        .social-links a {
+        .hero-social-links a {
             color: #eeeeee;
             font-size: 1.5rem;
             margin: 0 0.5rem;
             transition: color 0.3s ease;
             z-index: 2;
+        }
+
+        /* 外部组件高z-index设置 */
+        .external-component {
+          position: relative;
+          z-index: 10;
         }
 
         /* h1标题 */
@@ -597,7 +603,7 @@
     <section id="home" class="hero">
         <h1>Hey! my name is <span class="highlight">萌哥坑坑哒</span></h1>
         <p>I'm a 2D&3D artist, YouTuber from China.</p>
-        <div class="social-links">
+        <div class="hero-social-links">
             <a href="https://youtube.com/@MengGe_KKD" target="_blank"><i class="fab fa-youtube"></i></a>
             <a href="https://space.bilibili.com/110871903" target="_blank"><i class="fab fa-bilibili"></i></a>
             <a href="https://pixiv.net/users/70363431" target="_blank"><i class="fab fa-pixiv"></i></a>
@@ -607,9 +613,11 @@
             <a href="https://patreon.com/MengGe_KKD" target="_blank"><i class="fab fa-patreon"></i></a>
             <a href="https://github.com/menggekkd" target="_blank"><i class="fab fa-github"></i></a>
         </div>
-        <script type='text/javascript' src='https://storage.ko-fi.com/cdn/widget/Widget_2.js'></script><script type='text/javascript'>kofiwidget2.init('Support me on Ko-fi', '#266980', 'E1E1OR07H');kofiwidget2.draw();</script> 
+        <div class="external-component">
+            <script type='text/javascript' src='https://storage.ko-fi.com/cdn/widget/Widget_2.js'></script><script type='text/javascript'>kofiwidget2.init('Support me on Ko-fi', '#266980', 'E1E1OR07H');kofiwidget2.draw();</script> 
+        </div>
         <p></p>
-        <a href="#portfolio" class="btn">My works</a>
+        <a href="#portfolio" class="hero-btn">My works</a>
     </section>
 
     <!-- 关于我部分 -->
