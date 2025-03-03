@@ -300,21 +300,40 @@
             background-size: cover; /* 让背景图覆盖整个容器 */
             background-position: center; /* 背景图居中 */
             background-attachment: fixed; /* 固定背景，滚动时不移动 */
-            background-color: rgba(21, 21, 21, 0.8); /* 为背景图添加一个半透明的颜色覆盖层 */
             color: #EEEEEE; /* 文字颜色 */
             padding: 50px 0; /* 设置内边距 */
             height: 100vh; /* 可以根据需要调整高度 */
         }
         
-        h1 {
-            font-size: 3rem;
-            margin-bottom: 1rem;
+        .hero::before {
+          content: ''; /* 创建伪元素 */
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          background-color: rgba(0, 0, 0, 0.5); /* 半透明黑色层 */
+          z-index: 1; /* 确保覆盖层在图片之上 */
         }
         
+        .hero h1 {
+          position: relative;
+          z-index: 2; /* 文字内容位于覆盖层之上 */
+          color: white;
+          font-size: 3rem;
+          margin-bottom: 1rem;
+          text-align: center;
+        }
+
         .hero p {
             font-size: 1.2rem;
             max-width: 600px;
             margin-bottom: 2rem;
+        }
+        
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
         }
 
         /* 按钮 */
