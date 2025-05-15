@@ -12,3 +12,14 @@ var $grid = $('.grid');
         $grid.masonry('layout');
     });
 });
+
+$(document).ready(function() {
+    lightbox.option({
+        'resizeDuration': 200,
+        'wrapAround': true,
+        'albumLabel': 'Image %1 of %2',
+        'disableScrolling': true,
+        'fadeDuration': 300,
+        'imageFadeDuration': 300
+    });
+});
