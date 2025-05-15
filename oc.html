@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <title>OC - 萌哥坑坑哒</title>
+    <meta name="description" content="MengGe_KKD's illustrations">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="favicon/favicon.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/oc.css">
+    <link rel="stylesheet" href="css/lightbox.css">
+</head>
+<body>
+    <div class="page-transition"></div>
+    <div id="header"></div>
+
+    <main>
+        <section class="hero" style="background: #0f0f0f; min-height: 20vh;">
+            <div class="hero-content" style="max-width: 1200px;">
+                <div style="margin-bottom: 150px;"></div>
+                <h1>Original Character</h1>
+                <p>Here’s MengGe’s OC (original character) page!</p>
+                <div style="margin-bottom: 32px;"></div>
+            </div>
+        </section>
+
+        <section class="hero" style="background: #0f0f0f;">
+            <div class="hero-content" style="max-width: 1200px;">
+                <hr>
+                <div style="margin-bottom: 32px;"></div>
+                <div class="oc-grid">
+                    <div class="oc-list">
+                        <div class="oc-item">
+                            <a href="media/image/oc/Cian sketch-1.png" data-lightbox="oc" data-title="Cian (sketch)">
+                                <img src="media/image/oc/Cian sketch-1.png" alt="Death Stranding Miku">
+                            </a>
+                            <div class="oc-info">
+                                <h3>萌汐</h3>
+                                <h4>A dependent and emotional artist.</h4>
+                                <p>Name: Cian (Chinese Name: 萌汐)<br>Gender: Male<br>Pronouns: He/Him<br>Date of Birth: April 14<br>Height: 172 cm</p>
+
+                            </div>
+                        </div>
+                        <div class="oc-item">
+                            <a>
+                                <img src="image/wip.png" alt="wip">
+                            </a>
+                            <div class="oc-info">
+                                <h3>V</h3>
+                                <p>Name: V (Real Name: ██████)<br>Gender: Female<br>Pronouns: She/Her<br>Date of Birth: December 14<br>Height: 158 cm (excluding ahoge)</p>
+                            </div>
+                        </div>
+                        <div style="margin-bottom: 32px;"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="hero" style="background: #0f0f0f; min-height: 20vh;">
+            <div class="hero-content" style="max-width: 1200px;">
+                <hr>
+                    <div style="margin-bottom: 32px;"></div>
+                        <h2>About My OCs, Things You Should Know</h2>
+                    <div style="margin-bottom: -32px;"></div>
+                            <div class="oc-info">
+                                <li>All characters are over <b>18 years old.</b></li>
+                                <li>OC settings may be adjusted at any time, and the latest version takes precedence.</li>
+                                <li>These settings are created based on personal interest and may not fully align with real-world logic—please avoid overanalyzing.</li>
+                                <li>These OCs are original characters, and all rights belong to <b>萌哥坑坑哒 (MengGe_KKD)</b>. Do not use, recreate, or commercialize them without permission.</li>
+                                <li>Fanart is welcome! But please credit the original source and do not misrepresent it as official content.</li>
+                                <li>Any unauthorized AI-generated content or NFT-related usage is <b>STRICTLY PROHIBITED.</b></li>
+                                <li>Character personalities and backgrounds are based on personal interpretation — please respect the creator’s vision.</li>
+                                <li>Some settings may include <b>Psychological</b> or <b>Emotional themes</b>. If you find them uncomfortable, please proceed with discretion.</li>
+                            </div>
+                <div style="margin-bottom: 32px;"></div>
+            </div>
+        </section>
+    </main>
+
+    <button class="back-to-top" aria-label="Back to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <div id="footer"></div>
+
+    <div id="overlay-nav" class="overlay-nav" aria-hidden="true">
+        <button class="close-btn" aria-label="Close navigation menu">×</button>
+        <div id="overlay-content"></div>
+    </div>
+
+    <script>
+        window.addEventListener('load', function() {
+            setTimeout(function() {
+                document.querySelector('.page-transition').classList.add('fade-out');
+            }, 300);
+        });
+
+        document.addEventListener('click', e => {
+            const link = e.target.closest('a');
+            if (link && link.hostname === window.location.hostname && !link.target && !link.hash) {
+                e.preventDefault();
+                document.querySelector('.page-transition').classList.remove('fade-out');
+                setTimeout(() => {
+                    window.location.href = link.href;
+                }, 600);
+            }
+        });
+    </script>
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/masonry.pkgd.min.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/lightbox-plus-jquery.js"></script>
+
+</body>
+</html>

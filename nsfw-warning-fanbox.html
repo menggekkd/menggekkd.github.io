@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <title>NSFW WARNING</title>
+    <meta name="description" content="NSFW WARNING (pixivFANBOX)">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="favicon/favicon.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/lightbox.css">
+</head>
+<body>
+    <div class="page-transition"></div>
+    <header style="position: fixed; display: flex; justify-content: center; top: 0; width: 100%; z-index: 1000; background-color: #330a0a; padding: 12px 0">
+        <p style="max-width: 800px; margin: 0; text-align: center;  font-weight: 1000; font-size: 16px; color: #eee;">NSFW WARNING</p>
+    </header>
+    <main>
+        <section class="hero" style="background: #000000; min-height: 100vh;">
+            <div class="hero-content" style="max-width: 1200px;">
+                <img src="image/icon/thinking.png" alt="thinking" class="hero-image" style="max-width: 240px;">
+                <div style="margin-bottom: -28px;"></div>
+                <h1 style="background-color:#330a0a; padding: 16px 0;">NSFW WARNING</h1>
+                <div style="margin-bottom: 16px;"></div>
+                <p style="font-size: 16px;">本页面/内容包含 成人向或敏感内容，仅适合 18 岁及以上 的人士观看。<br>请确保在合适的环境下浏览，并遵守所在地相关法律法规。</p>
+                <div style="margin-bottom: -16px;"></div>
+                <p style="font-size: 16px;">This page/content contains adult or sensitive material and is intended for viewers aged 18 and above only.<br>Please ensure you are in an appropriate environment and comply with local laws and regulations.</p>
+                <div style="margin-bottom: 32px;"></div>
+                <hr></hr>
+                <h2 style="font-size: 24px;">你是否为 18岁及以上？/ Are You 18 or Older?</h2>
+                <div class="hero-buttons">
+                    <a href="index.html" class="hero-btn primary">No</a>
+                    <a href="https://menggekkd.fanbox.cc/" class="hero-btn primary">Yes</a>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer style="position: fixed; display: flex; justify-content: center;  bottom: 0; width: 100%; z-index: 1000; background-color: #330a0a; padding: 12px 0">
+        <p style="max-width: 800px; margin: 0; text-align: center; font-weight: 1000; font-size: 16px; color: #eee;">NSFW WARNING</p>
+    </footer>
+
+    <div id="overlay-nav" class="overlay-nav" aria-hidden="true">
+        <button class="close-btn" aria-label="Close navigation menu">×</button>
+        <div id="overlay-content"></div>
+    </div>
+
+    <script>
+        window.addEventListener('load', function() {
+            setTimeout(function() {
+                document.querySelector('.page-transition').classList.add('fade-out');
+            }, 300);
+        });
+
+        document.addEventListener('click', e => {
+            const link = e.target.closest('a');
+            if (link && link.hostname === window.location.hostname && !link.target && !link.hash) {
+                e.preventDefault();
+                document.querySelector('.page-transition').classList.remove('fade-out');
+                setTimeout(() => {
+                    window.location.href = link.href;
+                }, 600);
+            }
+        });
+    </script>
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/lightbox.js"></script>
+    <script src="js/masonry.pkgd.min.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/lightbox-plus-jquery.js"></script>
+
+</body>
+</html>

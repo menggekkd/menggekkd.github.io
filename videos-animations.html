@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <title>Video & Animations - 萌哥坑坑哒</title>
+    <meta name="description" content="MengGe_KKD's Video & Animations">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="favicon/favicon.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/lightbox.css">
+    <link rel="stylesheet" href="css/youtube-video-container.css">
+</head>
+<body>
+    <div class="page-transition"></div>
+    <div id="header"></div>
+
+    <main>
+        <section class="hero" style="background: #0f0f0f; min-height: 40vh;">
+            <div class="hero-content" style="max-width: 1200px;">
+                <div style="margin-bottom: 150px;"></div>
+                <h1>Video & Animation</h1>
+                <p>I use Blender, DaVinci Resolve, After Effices to create</p>
+                <div style="margin-bottom: 32px;"></div>
+                <div class="hero-buttons">
+                    <a href="https://youtube.com/@MengGe_KKD" class="hero-btn primary"><i class="fa-brands fa-youtube"></i> YouTube</a>
+                    <a href="https://space.bilibili.com/110871903" class="hero-btn primary"><i class="fa-brands fa-bilibili"></i> Bilibili</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="hero" style="background: #0f0f0f;">
+            <div class="hero-content" style="max-width: 1200px;">
+                <hr>
+                <div style="margin-bottom: 32px;"></div>
+                <h2>Featured Videos, Animations</h2>
+                <div style="margin-bottom: -24px;"></div>
+                <p style="font-weight: 300; font-size: 16px;">All works are copyrighted by 萌哥坑坑哒（MengGe_KKD）.</p>
+                <div style="margin-bottom: -24px;"></div>
+                <p style="font-weight: 300; font-size: 16px;">Reposting to other platforms or using them for NFTs, AI training, or any other infringing purposes is strictly prohibited.</p>
+                <div style="margin-bottom: 32px;"></div>
+                <div class="video-grid">
+                    <iframe src="https://www.youtube.com/embed/XF9mg__p-9w?si=US_YMHcmdO_XwICI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <iframe src="https://www.youtube.com/embed/aQeS11u-OvQ?si=146hgnCVUQqibL7c" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <iframe src="https://www.youtube.com/embed/4iPXvY0JHWs?si=Vg_9AzA7ZG6lWZQH" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>                    <iframe src="https://www.youtube.com/embed/e1DwFzL4kE4?si=fOu1w8XfKRBMwesE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <iframe src="https://www.youtube.com/embed/agU9Cp1wqNU?si=mxPuzAqTVlXcYOHX" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <iframe src="https://www.youtube.com/embed/V4jFO3GsivM?si=ZQs1z_QCxMJKyKJb" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+
+                <div style="margin-bottom: -32px;"></div>
+                <div style="display: flex; justify-content: right; padding: 24px 0;">
+                    <a href="https://www.youtube.com/@MengGe_KKD" style="text-decoration: none;">
+                        <p style="text-align: right; max-width: 800px; margin: 0; font-weight: 300; font-size: 18px;">
+                            Video courtesy of YouTube
+                        </p>
+                    </a>
+                </div>
+                <div style="margin-bottom: 32px;"></div>
+            </div>
+        </section>
+    </main>
+
+    <button class="back-to-top" aria-label="Back to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <div id="footer"></div>
+
+    <div id="overlay-nav" class="overlay-nav" aria-hidden="true">
+        <button class="close-btn" aria-label="Close navigation menu">×</button>
+        <div id="overlay-content"></div>
+    </div>
+
+    <script>
+        window.addEventListener('load', function() {
+            setTimeout(function() {
+                document.querySelector('.page-transition').classList.add('fade-out');
+            }, 300);
+        });
+
+        document.addEventListener('click', e => {
+            const link = e.target.closest('a');
+            if (link && link.hostname === window.location.hostname && !link.target && !link.hash) {
+                e.preventDefault();
+                document.querySelector('.page-transition').classList.remove('fade-out');
+                setTimeout(() => {
+                    window.location.href = link.href;
+                }, 600);
+            }
+        });
+    </script>
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/masonry.pkgd.min.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/lightbox-plus-jquery.js"></script>
+
+</body>
+</html>

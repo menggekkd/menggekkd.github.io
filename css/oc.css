@@ -1,0 +1,73 @@
+@font-face {
+    font-family: "MiSans";
+    src: url("font/MiSans-VF.ttf") format("truetype-variations");
+    font-weight: 300 1000;
+}
+
+.oc-list {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    padding: 20px;
+}
+
+.oc-item {
+    display: flex;
+    flex-direction: column;
+    background: #0f0f0f;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px #00000033;
+}
+
+.oc-item img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.oc-item img:hover {
+    transform: scale(1.02);
+}
+
+.oc-info {
+    padding: 20px;
+    text-align: left;
+    margin-top: 4px;
+    margin-bottom: 12px;
+    margin-left: 16px;
+}
+
+.oc-info h3 {
+    margin: 0 0 8px 0;
+    font-size: 36px;
+    font-weight: 1000;
+    color: #eee;
+}
+
+.oc-info h4 {
+    margin: 0 0 8px 0;
+    font-size: 24px;
+    font-weight: 700;
+    color: #eee;
+}
+
+.oc-info p {
+    margin: 0;
+    font-size: 18px;
+    font-weight: 300;
+    color: #eee;
+}
+
+.oc-info li {
+    margin: 0;
+    margin-bottom: 12px;
+    font-size: 18px;
+    font-weight: 300;
+    color: #eee;
+}
+
+.oc-info b {
+    font-weight: 700;
+}

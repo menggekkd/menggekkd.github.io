@@ -1,0 +1,30 @@
+.grid {
+    max-width: 1400px;
+    min-width: 500px;
+    margin: 0 auto;
+}
+
+.grid-sizer,
+.grid-item {
+    width: 32%;
+}
+
+.grid-item {
+    margin-bottom: 16px;
+    overflow: hidden;
+    border-radius: var(--glass-radius);
+    box-shadow: 0 4px 10px #00000030;
+    min-width: 160px;
+}
+
+.grid-item img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: var(--glass-radius);
+    transition: transform 0.3s ease;
+}
+
+.grid-item img:hover {
+    transform: scale(1.02);
+}

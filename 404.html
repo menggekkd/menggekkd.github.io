@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <title>404 - Page not found</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="favicon/favicon.ico">
+    <link rel="stylesheet" href="css/style.css">
+    <script>
+        let path = window.location.pathname;
+        let referrer = document.referrer;
+        
+        setTimeout(() => {
+            window.location.href = 'index.html';
+        }, 5000);
+
+        window.addEventListener('load', function() {
+            setTimeout(function() {
+                document.querySelector('.page-transition').classList.add('fade-out');
+            }, 300);
+        });
+    </script>
+</head>
+<body>
+    <div class="page-transition"></div>
+
+    <main>
+        <section class="hero" style="background: #000000; min-height: 100vh;">
+            <div class="hero-content">
+                <img src="image/icon/sorry.png" alt="404" class="hero-image" style="max-width: 240px;">
+                <h1>404 - Page not found (´･ω･`)</h1>
+                <p>Oops! That page can't be found, <span id="countdown">redirecting to homepage in 5 seconds...</span></p>
+                <div class="hero-buttons">
+                    <a href="index.html" class="hero-btn primary">Return Home</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        window.addEventListener('load', function() {
+            setTimeout(function() {
+                document.querySelector('.page-transition').classList.add('fade-out');
+            }, 300);
+        });
+
+        let count = 5;
+        const countdownElement = document.getElementById('countdown');
+        
+        const countdown = setInterval(() => {
+            count--;
+            countdownElement.textContent = `redirecting to homepage in ${count} seconds...`;
+            
+            if (count <= 0) {
+                clearInterval(countdown);
+                window.location.href = 'index.html';
+            }
+        }, 1000);
+
+        document.addEventListener('click', e => {
+            const link = e.target.closest('a');
+            if (link && link.hostname === window.location.hostname && !link.target && !link.hash) {
+                e.preventDefault();
+                document.querySelector('.page-transition').classList.remove('fade-out');
+                setTimeout(() => {
+                    window.location.href = link.href;
+                }, 600);
+            }
+        });
+    </script>
+    <script src="js/script.js"></script>
+</body>
+</html>
