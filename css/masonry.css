@@ -1,6 +1,4 @@
 .grid {
-    max-width: 1400px;
-    min-width: 500px;
     margin: 0 auto;
 }
 
@@ -10,11 +8,12 @@
 }
 
 .grid-item {
+    max-width: 1400px;
+    min-width: 160px;
     margin-bottom: 16px;
     overflow: hidden;
     border-radius: var(--glass-radius);
     box-shadow: 0 4px 10px #00000030;
-    min-width: 160px;
 }
 
 .grid-item img {
