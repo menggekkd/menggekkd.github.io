@@ -22,6 +22,7 @@
 
 - [Ko-fi](https://more.ko-fi.com/brand-assets) — Ko-fi support button
 - [YouTube](https://support.google.com/youtube/answer/171780) — Video embeds
+- [Sketchfab](https://support.fab.com/s/article/Embedding-your-3D-models) — 3D model embeds
 
 ## Notes
 
@@ -59,6 +60,7 @@ If there’s any infringement or missing attributions, please contact for correc
 
 - [Ko-fi](https://more.ko-fi.com/brand-assets) — Ko-fi 支持按钮
 - [YouTube](https://support.google.com/youtube/answer/171780) — 视频嵌入
+- [Sketchfab](https://support.fab.com/s/article/Embedding-your-3D-models) — 3D模型嵌入
 
 ## 备注
 
