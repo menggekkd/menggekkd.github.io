@@ -84,18 +84,6 @@ backToTop.addEventListener('click', () => {
     });
 });
 
-// 配置 lightbox
-$(document).ready(function() {
-    lightbox.option({
-        'resizeDuration': 200,
-        'wrapAround': true,
-        'albumLabel': 'Image %1 of %2',
-        'disableScrolling': true,
-        'fadeDuration': 300,
-        'imageFadeDuration': 300
-    });
-});
-
 // 页面过渡处理
 document.addEventListener('DOMContentLoaded', () => {
     const transition = document.querySelector('.page-transition');
