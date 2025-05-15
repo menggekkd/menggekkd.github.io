@@ -7,7 +7,8 @@
 
 ## External Libraries
 
-- [Masonry.js](https://masonry.desandro.com/) — Masonry layout library
+- [Masonry.js](https://masonry.desandro.com/) — Masonry layout library\
+- [imagesLoaded](https://imagesloaded.desandro.com/) — Images Loaded
 - [Lightbox2](https://lokeshdhakar.com/projects/lightbox2/) — Image lightbox preview
 - [Font Awesome](https://fontawesome.com/) — Icon library
 - [MiSans](https://hyperos.mi.com/font/) — Website font
@@ -46,6 +47,7 @@ If there’s any infringement or missing attributions, please contact for correc
 ## 使用的外部库
 
 - [Masonry.js](https://masonry.desandro.com/) — 网格瀑布流布局库
+- [imagesLoaded](https://imagesloaded.desandro.com/) — 图片加载
 - [Lightbox2](https://lokeshdhakar.com/projects/lightbox2/) — 图片放大预览效果
 - [Font Awesome](https://fontawesome.com/) — 图标库
 - [MiSans](https://hyperos.mi.com/font/) — 网站字体
