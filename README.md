@@ -7,7 +7,7 @@
 
 ## External Libraries
 
-- [Masonry.js](https://masonry.desandro.com/) — Masonry layout library\
+- [Masonry.js](https://masonry.desandro.com/) — Masonry layout library
 - [imagesLoaded](https://imagesloaded.desandro.com/) — Images Loaded
 - [Lightbox2](https://lokeshdhakar.com/projects/lightbox2/) — Image lightbox preview
 - [Font Awesome](https://fontawesome.com/) — Icon library
@@ -24,6 +24,11 @@
 - [Ko-fi](https://more.ko-fi.com/brand-assets) — Ko-fi support button
 - [YouTube](https://support.google.com/youtube/answer/171780) — Video embeds
 - [Sketchfab](https://support.fab.com/s/article/Embedding-your-3D-models) — 3D model embeds
+
+## Hosting & Domain
+
+- Domain registered via [Namecheap](https://www.namecheap.com/)
+- Site DNS and management by [Cloudflare](https://www.cloudflare.com/)
 
 ## Notes
 
@@ -63,6 +68,11 @@ If there’s any infringement or missing attributions, please contact for correc
 - [Ko-fi](https://more.ko-fi.com/brand-assets) — Ko-fi 支持按钮
 - [YouTube](https://support.google.com/youtube/answer/171780) — 视频嵌入
 - [Sketchfab](https://support.fab.com/s/article/Embedding-your-3D-models) — 3D模型嵌入
+
+## 域名与托管
+
+- 域名注册于 [Namecheap](https://www.namecheap.com/)
+- 通过 [Cloudflare](https://www.cloudflare.com/) 进行 DNS 和站点管理
 
 ## 备注
 
