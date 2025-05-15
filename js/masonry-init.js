@@ -1,7 +1,12 @@
-var grid = document.querySelector('.grid');
-var msnry = new Masonry(grid, {
-  itemSelector: '.grid-item',
-  columnWidth: '.grid-sizer',
-  gutter: 16,
-  percentPosition: true
+/* masonry */
+var $grid = $('.grid').masonry({
+    itemSelector: '.grid-item',
+    columnWidth: '.grid-item',
+    gutter: 16,
+    percentPosition: true
+});
+
+/* imagesLoaded */
+$grid.imagesLoaded().progress( function() {
+    $grid.masonry('layout');
 });
