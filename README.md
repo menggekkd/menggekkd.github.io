@@ -2,8 +2,8 @@
 
 ## Software Used
 
-- [Visual Studio Code](https://code.visualstudio.com/)
-- [Figma](https://www.figma.com/)
+- [Visual Studio Code](https://code.visualstudio.com/) — Developers
+- [Figma](https://www.figma.com/) — Mengmoji Design and Creation
 
 ## External Libraries
 
@@ -47,8 +47,8 @@ If there’s any infringement or missing attributions, please contact for correc
 
 ## 制作软件
 
-- [Visual Studio Code](https://code.visualstudio.com/)
-- [Figma](https://www.figma.com/)
+- [Visual Studio Code](https://code.visualstudio.com/) — 开发
+- [Figma](https://www.figma.com/) — Mengmoji的设计与制作
 
 ## 使用的外部库
 
