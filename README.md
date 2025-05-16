@@ -2,8 +2,8 @@
 
 ## Software Used
 
-- Visual Studio Code
-- Figma
+- [Visual Studio Code](https://code.visualstudio.com/)
+- [Figma](https://www.figma.com/)
 
 ## External Libraries
 
@@ -47,8 +47,8 @@ If there’s any infringement or missing attributions, please contact for correc
 
 ## 制作软件
 
-- Visual Studio Code
-- Figma
+- [Visual Studio Code](https://code.visualstudio.com/)
+- [Figma](https://www.figma.com/)
 
 ## 使用的外部库
 
