@@ -458,6 +458,7 @@ p {
     white-space: nowrap; 
     min-width: auto; 
     flex: 0 1 auto; 
+    margin-bottom: 20px
 }
 
 .hero-btn.primary {
