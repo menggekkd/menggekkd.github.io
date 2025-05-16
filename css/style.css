@@ -725,10 +725,29 @@ p {
 }
 
 .footer-text {
-    color: var(--text-color);
-    opacity: 0.6;
     font-size: 14px;
     font-weight: 300;
+}
+
+.footer-text p {
+    color: #555;
+    font-size: 14px;
+    text-decoration: none;
+}
+
+
+.footer-text a {
+    color: #555;
+    font-size: 14px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.footer-text a:hover {
+    color: #eee;
+    font-size: 14px;
+    font-weight: 700;
+    text-decoration: none;
 }
 
 .footer-nav-btn {
