@@ -40,7 +40,8 @@ This project is a personal creation. All works (illustrations, 3D works, videos,
 
 If there’s any infringement or missing attributions, please contact for correction.
 
-### Special thanks to all open-source projects and material creators for their contributions! (/≧▽≦)/
+### Special thanks to all open-source projects and material creators for their contributions! 
+### (/≧▽≦)/ ~~❤️
 
 ---
 
@@ -84,4 +85,5 @@ If there’s any infringement or missing attributions, please contact for correc
 
 如有侵权或素材标注遗漏，请联系修正。
 
-### 感谢所有开源项目和素材作者的支持！(/≧▽≦)/
+### 感谢所有开源项目和素材作者的支持
+### (/≧▽≦)/ ~~❤️
