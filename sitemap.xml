@@ -1,48 +1,52 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-    <url>
-        <loc>https://menggekkd.me/</loc>
-        <lastmod>2025-5-16</lastmod>
-        <priority>1.0</priority>
-    </url>
-    <url>
-        <loc>https://menggekkd.me/about</loc>
-        <lastmod>2025-5-16</lastmod>
-        <priority>0.8</priority>
-    </url>
-    <url>
-        <loc>https://menggekkd.me/contact</loc>
-        <lastmod>2025-5-16</lastmod>
-        <priority>0.8</priority>
-    </url>
-        <url>
-        <loc>https://menggekkd.me/about</loc>
-        <lastmod>2025-5-16</lastmod>
-        <priority>0.8</priority>
-    </url>
-        <url>
-        <loc>https://menggekkd.me/oc</loc>
-        <lastmod>2025-5-16</lastmod>
-        <priority>0.8</priority>
-    </url>
-        <url>
-        <loc>https://menggekkd.me/works</loc>
-        <lastmod>2025-5-16</lastmod>
-        <priority>0.8</priority>
-    </url>
-    <url>
-        <loc>https://menggekkd.me/illustrations</loc>
-        <lastmod>2025-5-16</lastmod>
-        <priority>0.8</priority>
-    </url>
-    <url>
-        <loc>https://menggekkd.me/3dworks</loc>
-        <lastmod>2025-5-16</lastmod>
-        <priority>0.8</priority>
-    </url>
-    <url>
-        <loc>https://menggekkd.me/videos-animations</loc>
-        <lastmod>2025-5-16</lastmod>
-        <priority>0.8</priority>
-    </url>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+
+
+<url>
+  <loc>https://menggekkd.me/</loc>
+  <lastmod>2025-05-16T00:32:44+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://menggekkd.me/about</loc>
+  <lastmod>2025-05-16T00:32:44+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://menggekkd.me/illustrations</loc>
+  <lastmod>2025-05-16T00:32:44+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://menggekkd.me/3dworks</loc>
+  <lastmod>2025-05-16T00:32:44+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://menggekkd.me/videos-animations</loc>
+  <lastmod>2025-05-16T00:32:44+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://menggekkd.me/nsfw-warning-fanbox</loc>
+  <lastmod>2025-05-16T00:32:44+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://menggekkd.me/contact</loc>
+  <lastmod>2025-05-16T00:32:44+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://menggekkd.me/index.html</loc>
+  <lastmod>2025-05-16T00:32:44+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+
+
 </urlset>
