@@ -730,8 +730,46 @@ p {
     color: #eee;
 }
 
+.footer-socials-mobile {
+    margin-top: 12px;
+    margin-bottom: 24px;
+    padding: 15px 0;
+    display: none;
+    justify-content: center;
+}
+
+.footer-socials-mobile-btn {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.footer-socials-mobile-btn a {
+    color: #555;
+    font-size: 20px;
+    transition: all 0.3s ease;
+}
+
+.footer-socials-mobile-btn a:hover {
+    color: #eee;
+}
+
+@media (max-width: 500px) {
+    .footer-socials {
+        display: none;
+    }
+
+    .footer-socials-mobile {
+        display: flex;
+    }
+
+    .footer-bottom {
+        margin-top: -32px;
+        padding: 0 0;
+    }
+}
+
 .footer-bottom {
-    margin-top: 20px;
     padding: 15px 0;
 }
 
