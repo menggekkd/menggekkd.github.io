@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <title>README.md - 萌哥坑坑哒</title>
+    <meta name="description" content="About GitHub README.md">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="favicon/favicon.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/legal-pages.css">
+</head>
+<body>
+    <div class="page-transition"></div>
+    <div id="header"></div>
+
+    <main>
+        <section class="hero" style="background: #0f0f0f; min-height: 20vh;">
+            <div class="hero-content" style="max-width: 1200px; margin-top: 120px;">
+                <h1 style="text-align: left;">GitHub README.md</h1>
+                <p style="text-align: left; max-width: 800px;">Here's the README.md for the site's GitHub repository.</p>
+                <p style="text-align: left; max-width: 800px; margin-bottom: 64px;"><b>Last Updated: </b>2025-05-18</p>
+                <hr>
+                <div style="display: flex; gap: 40px;">
+                    <div class="legal-pages-info" style="flex: 1; max-width: 800px;">
+                        <h1>Credits & Project Info</h1>
+                        <h2 id="software-used">Software Used</h2>
+                        <li><a href="https://code.visualstudio.com/">Visual Studio Code</a> — Developers</li>
+                        <li><a href="https://www.figma.com/">Figma</a> — Mengmoji Design and Creation</li>
+                        <h2 id="external-libraries">External Libraries</h2>
+                        <li><a href="https://masonry.desandro.com/">Masonry.js</a> — Masonry layout library</li>
+                        <li><a href="https://imagesloaded.desandro.com/">imagesLoaded</a> — Images Loaded</li>
+                        <li><a href="https://lokeshdhakar.com/projects/lightbox2/">Lightbox2</a> — Image lightbox preview</li>
+                        <li><a href="https://fontawesome.com/">Font Awesome</a> — Icon library</li>
+                        <li><a href="https://hyperos.mi.com/font/">MiSans</a> — Website font</li>
+                        <h2 id="assets">Images & Icon Assets</h2>
+                        <li>Website logo and all artworks are created by <b>萌哥坑坑哒(MengGe_KKD)</b>. All rights reserved.</li>
+                        <li>Most icons are provided by <a href="https://fontawesome.com/">Font Awesome</a></li>
+                        <li>Emoji used on the site are made by <b>萌哥坑坑哒(MengGe_KKD)</b> as <a href="https://github.com/menggekkd/Mengmoji">Mengmoji</a></li>
+                        <h2 id="external-embeds">External Embeds</h2>
+                        <li><a href="https://support.google.com/youtube/answer/171780">YouTube</a> — Video embeds</li>
+                        <li><a href="https://support.fab.com/s/article/Embedding-your-3D-models">Sketchfab</a> — 3D model embeds</li>
+                        <h2 id="hosting-domain">Hosting & Domain</h2>
+                        <li>Domain registered via <a href="https://www.namecheap.com/">Namecheap</a></li>
+                        <li>Site DNS and management by <a href="https://www.cloudflare.com/">Cloudflare</a></li>
+                        <h2 id="notes">Notes</h2>
+                        <p>This website was built with AI assistance (ChatGPT, Copilot) during development. (I was desperately fixing bugs everywhere... AHHHHH...)</p>
+                        <h2 id="license-copyright">License & Copyright</h2>
+                        <p>This project is a personal creation. All works (illustrations, 3D works, videos, animations, OC character designs, etc.) are copyrighted by <b>萌哥坑坑哒(MengGe_KKD)</b>. Unauthorized redistribution or commercial use is prohibited.</p>
+                        <p>If there’s any infringement or missing attributions, please contact for correction.</p>
+                        <div style="margin-bottom: 32px;"></div>
+                        <h3 id="thanks">Special thanks to all open-source projects and material creators for their contributions!</h3>
+                        <h3>(/≧▽≦)/ ~~❤️</h3>
+                        <div style="margin-bottom: 32px;"></div>
+                        <p>View <a href="https://github.com/menggekkd/menggekkd.github.io/blob/main/README.md">README.md</a> in GitHub repository</p>
+                    </div>
+                    <div class="legal-pages-nav">
+                        <div class="nav-container" style="position: sticky; top: 120px;">
+                            <h3>Contents</h3>
+                            <ul>
+                                <li><a href="#software-used">Software Used</a></li>
+                                <li><a href="#external-libraries">External Libraries</a></li>
+                                <li><a href="#assets">Images & Icon Assets</a></li>
+                                <li><a href="#external-embeds">External Embeds</a></li>
+                                <li><a href="#hosting-domain">Hosting & Domain</a></li>
+                                <li><a href="#notes">Notes</a></li>
+                                <li><a href="#license-copyright">License & Copyright</a></li>
+                                <li><a href="#thanks">Thank you!</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="hero" style="background: #0f0f0f; min-height: 5vh;"></section>
+    </main>
+
+    <button class="back-to-top" aria-label="Back to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <div id="footer"></div>
+
+    <div id="overlay-nav" class="overlay-nav" aria-hidden="true">
+        <button class="close-btn" aria-label="Close navigation menu">×</button>
+        <div id="overlay-content"></div>
+    </div>
+
+    <script>
+        window.addEventListener('load', function() {
+            setTimeout(function() {
+                document.querySelector('.page-transition').classList.add('fade-out');
+            }, 300);
+        });
+
+        document.addEventListener('click', e => {
+            const link = e.target.closest('a');
+            if (link && link.hostname === window.location.hostname && !link.target && !link.hash) {
+                e.preventDefault();
+                document.querySelector('.page-transition').classList.remove('fade-out');
+                setTimeout(() => {
+                    window.location.href = link.href;
+                }, 600);
+            }
+        });
+    </script>
+
+    <script src="js/script.js"></script>
+
+</body>
+</html>
