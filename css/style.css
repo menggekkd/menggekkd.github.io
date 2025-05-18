@@ -690,6 +690,16 @@ p {
     }
 }
 
+@media (max-width: 500px) {
+    .support-btn {
+        display: none;
+    }
+
+    .scroll-hint {
+        display: none;
+    }
+}
+
 /* footer */
 .footer {
     background: linear-gradient(#000);
