@@ -5,6 +5,7 @@
     <title>Contact - 萌哥坑坑哒</title>
     <meta name="description" content="Contact me?">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
     <link rel="icon" type="image/x-icon" href="favicon/favicon.ico">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
@@ -46,9 +47,9 @@
         <section class="hero" style="background: #0f0f0f; min-height: 40vh;">
             <div class="hero-content" style="max-width: 1200px;">
                 <h1 style="font-size: 64px;">Send me an Email?</h1>
-                <p>My Email: <a href="mailto:menggekkd@gmail.com" style="color: #eee;">menggekkd@gmail.com</a></p>
+                <p>My Email: <a style="color: #eee;"><span id="mail"></span></a></p>
                 <div class="hero-buttons">
-                    <a href="mailto:menggekkd@gmail.com" class="hero-btn primary"><i class="fa-solid fa-envelope"></i> Send an Email <i class="fa-solid fa-share"></i></a>
+                    <a id="emailto" class="hero-btn primary"><i class="fa-solid fa-envelope"></i> Send an Email <i class="fa-solid fa-share"></i></a>
                 </div>
             </div>
         </section>
@@ -84,6 +85,19 @@
         });
     </script>
 
+    <script>
+        document.getElementById("mail").innerHTML = "menggekkd" + "@" + "gmail.com";
+    </script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            var user = "hello";
+            var domain = "example.com";
+            var link = document.getElementById("emailto");
+            link.href = "mailto:" + user + "@" + domain;
+        });
+    </script>
+    
     <script src="js/script.js"></script>
 
 </body>
