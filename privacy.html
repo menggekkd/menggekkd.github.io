@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <title>Privacy Policy - 萌哥坑坑哒</title>
+    <meta name="description" content="About Privacy Policy">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="favicon/favicon.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/privacy.css">
+</head>
+<body>
+    <div class="page-transition"></div>
+    <div id="header"></div>
+
+    <main>
+        <section class="hero" style="background: #0f0f0f; min-height: 20vh;">
+            <div class="hero-content" style="max-width: 1200px; margin-top: 120px;">
+                <h1 style="text-align: left;">Privacy Policy</h1>
+                <p style="text-align: left; max-width: 800px;">Thank you for visiting this website. I value your privacy and this policy explains how your information is handled when using this site.</p>
+                <p style="text-align: left; max-width: 800px; margin-bottom: 64px;"><b>Last Updated: </b>2025-05-18</p>
+                <hr>
+                <div style="display: flex; gap: 40px;">
+                    <div class="privacy-info" style="flex: 1; max-width: 800px;">
+                        <h2 id="information-we-collect">Information We Collect</h2>
+                        <p>This website itself does not actively collect any personal information. However, third-party services embedded on this site (such as YouTube, Sketchfab) may collect certain information like device type, browser version, approximate location, and interaction data within their services.</p>
+                        <h2 id="how-we-use-your-information">How We Use Your Information</h2>
+                        <p>Since no personal information is actively collected by this site, no data is used for any direct purpose. Third-party services may use the information they collect in accordance with their own privacy policies for analytics, service improvement, or personalized content delivery.</p>
+                        <h2 id="information-sharing-and-disclosure">Information Sharing and Disclosure</h2>
+                        <p>This site does not sell, trade, or disclose personal information. Any data processed by third-party services is governed by their individual privacy terms. You are encouraged to review those policies when interacting with embedded content.</p>
+                        <h2 id="data-security">Data Security</h2>
+                        <p>No sensitive or personally identifiable data is stored on this website. All external services embedded in the site are responsible for their own data security and management practices.</p>
+                        <h2 id="cookies">Cookies</h2>
+                        <p>This website does not set or manage any cookies. Embedded services such as YouTube may deploy their own cookies for video playback optimization and analytics.</p>
+                        <h2 id="third-party-links">Third-Party Links</h2>
+                        <p>This site contains links and embedded content from third-party platforms. These external sites have their own privacy policies, and visiting them is at your discretion.</p>
+                        <h2 id="childrens-privacy">Children's Privacy</h2>
+                        <p>This website does not knowingly collect information from children under the age of 13. If you believe any such data has been collected via third-party services, please refer to their privacy policies for management or removal procedures.</p>
+                        <h2 id="changes-to-this-privacy-policy">Changes to This Privacy Policy</h2>
+                        <p>This privacy policy may be updated periodically to reflect changes in website features or applicable regulations. All updates will be posted on this page with a revised effective date.</p>
+                        <h2 id="contact-us">Contact Us</h2>
+                        <p>For any questions or concerns regarding privacy or data handling, please contact me through the <a href="contact.html">email address</a> listed on this site.</p>
+                    </div>
+                    <div class="privacy-nav">
+                        <div class="nav-container" style="position: sticky; top: 120px;">
+                            <h3>Contents</h3>
+                            <ul>
+                                <li><a href="#information-we-collect">Information We Collect</a></li>
+                                <li><a href="#how-we-use-your-information">How We Use Your Information</a></li>
+                                <li><a href="#information-sharing-and-disclosure">Information Sharing and Disclosure</a></li>
+                                <li><a href="#data-security">Data Security</a></li>
+                                <li><a href="#cookies">Cookies</a></li>
+                                <li><a href="#third-party-links">Third-Party Links</a></li>
+                                <li><a href="#childrens-privacy">Children's Privacy</a></li>
+                                <li><a href="#changes-to-this-privacy-policy">Changes to This Privacy Policy</a></li>
+                                <li><a href="#contact-us">Contact Us</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="hero" style="background: #0f0f0f; min-height: 5vh;"></section>
+    </main>
+
+    <button class="back-to-top" aria-label="Back to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <div id="footer"></div>
+
+    <div id="overlay-nav" class="overlay-nav" aria-hidden="true">
+        <button class="close-btn" aria-label="Close navigation menu">×</button>
+        <div id="overlay-content"></div>
+    </div>
+
+    <script>
+        window.addEventListener('load', function() {
+            setTimeout(function() {
+                document.querySelector('.page-transition').classList.add('fade-out');
+            }, 300);
+        });
+
+        document.addEventListener('click', e => {
+            const link = e.target.closest('a');
+            if (link && link.hostname === window.location.hostname && !link.target && !link.hash) {
+                e.preventDefault();
+                document.querySelector('.page-transition').classList.remove('fade-out');
+                setTimeout(() => {
+                    window.location.href = link.href;
+                }, 600);
+            }
+        });
+    </script>
+
+    <script src="js/script.js"></script>
+
+</body>
+</html>
