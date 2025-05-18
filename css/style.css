@@ -640,7 +640,7 @@ p {
 }
 
 /* 响应式设计 */
-@media (max-width: 1365px) {
+@media (max-width: 1200px) {
     .header {
         min-height: var(--header-height);
     }
