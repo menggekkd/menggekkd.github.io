@@ -16,6 +16,15 @@ html {
     margin-bottom: 12px;
 }
 
+.legal-pages-info h1 {
+    margin: 0 0 8px 0;
+    margin-top: 36px;
+    font-size: 48px;
+    font-weight: 1000;
+    color: #eee;
+    scroll-margin-top: 120px;
+}
+
 .legal-pages-info h2 {
     margin: 0 0 8px 0;
     margin-top: 36px;
@@ -34,6 +43,13 @@ html {
 
 .legal-pages-info p {
     margin: 0;
+    font-size: 18px;
+    font-weight: 300;
+    color: #eee;
+}
+
+.legal-pages-info li {
+    margin: 12px;
     font-size: 18px;
     font-weight: 300;
     color: #eee;
