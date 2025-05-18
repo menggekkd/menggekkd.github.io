@@ -1,0 +1,104 @@
+@font-face {
+    font-family: "MiSans";
+    src: url("/font/MiSans-VF.ttf") format("truetype-variations");
+    font-weight: 300 1000;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-timeline: 500ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.privacy-info {
+    padding: 20px;
+    text-align: left;
+    margin-top: 4px;
+    margin-bottom: 12px;
+}
+
+.privacy-info h2 {
+    margin: 0 0 8px 0;
+    margin-top: 36px;
+    font-size: 32px;
+    font-weight: 1000;
+    color: #eee;
+    scroll-margin-top: 120px;
+}
+
+.privacy-info h4 {
+    margin: 0 0 8px 0;
+    font-size: 24px;
+    font-weight: 700;
+    color: #eee;
+}
+
+.privacy-info p {
+    margin: 0;
+    font-size: 18px;
+    font-weight: 300;
+    color: #eee;
+}
+
+.privacy-info b {
+    font-weight: 700;
+}
+
+.privacy-info a {
+    color: #eee;
+    transition: all 0.3s ease;
+}
+
+.privacy-info a:hover {
+    font-weight: 700;
+}
+
+.privacy-nav {
+    width: 260px;
+    margin-top: 50px;
+    min-width: 200px;
+    margin-left: auto;
+}
+
+.nav-container {
+    background: #151515;
+    padding: 32px;
+    border-radius: 8px;
+}
+
+.privacy-nav h3 {
+    margin-top: 0;
+    margin-bottom: 24px;
+    color: #eee;
+    text-align: left;
+    font-size: 24px;
+}
+
+.privacy-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.privacy-nav li {
+    margin-bottom: 16px;
+    text-align: left;
+    font-size: 12px;
+}
+
+.privacy-nav a {
+    color: #aaa;
+    text-decoration: none;
+    transition: color 0.3s;
+    display: inline-block;
+    position: relative;
+}
+
+.privacy-nav a:hover {
+    color: #fff;
+}
+
+@media (max-width: 800px) {
+    .privacy-nav {
+        display: none;
+    }
+}
