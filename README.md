@@ -35,7 +35,7 @@ This website was built with AI assistance (ChatGPT, Copilot) during development.
 
 ## License & Copyright
 
-This project is a personal creation. All works (illustrations, 3D works, videos, animations, OC character designs, etc.) are copyrighted by Mengge. Unauthorized redistribution or commercial use is prohibited.
+This project is a personal creation. All works (illustrations, 3D works, videos, animations, OC character designs, etc.) are copyrighted by **MengGe_KKD**. Unauthorized redistribution or commercial use is prohibited.
 
 If there’s any infringement or missing attributions, please contact for correction.
 
@@ -79,7 +79,7 @@ If there’s any infringement or missing attributions, please contact for correc
 
 ## 版权声明
 
-本项目为个人作品，所有作品（例如插画、3D作品、视频和动画、OC角色设定等内容）版权归作者 **萌哥** 所有，非经许可，禁止转载或商用。
+本项目为个人作品，所有作品（例如插画、3D作品、视频和动画、OC角色设定等内容）版权归作者 **萌哥坑坑哒** 所有，非经许可，禁止转载或商用。
 
 如有侵权或素材标注遗漏，请联系修正。
 
