@@ -15,9 +15,9 @@
 
 ## Images & Icon Assets
 
-- Website logo and all artworks are created by Mengge Kengkengda. All rights reserved.
+- Website logo and all artworks are created by **MengGe_KKD**. All rights reserved.
 - Most icons are provided by [Font Awesome](https://fontawesome.com/)
-- Emoji used on the site are made by Mengge as [Mengmoji](https://github.com/menggekkd/Mengmoji)
+- Emoji used on the site are made by **MengGe_KKD** as [Mengmoji](https://github.com/menggekkd/Mengmoji)
 
 ## External Embeds
 
@@ -61,7 +61,7 @@ If there’s any infringement or missing attributions, please contact for correc
 
 - 网站 Logo 及所有作品由 **萌哥坑坑哒** 制作，版权归作者本人所有
 - 大部分图标来自 [Font Awesome](https://fontawesome.com/)
-- 网站使用的 Emoji 为萌哥制作的 [Mengmoji](https://github.com/menggekkd/Mengmoji)
+- 网站使用的 Emoji 为**萌哥坑坑哒**制作的 [Mengmoji](https://github.com/menggekkd/Mengmoji)
 
 ## 外部嵌入
 
