@@ -422,6 +422,17 @@ p {
     color: var(--text-color);
 }
 
+.hero-content a {
+    font-size: 20px;
+    margin-bottom: 20px;
+    color: var(--text-color);
+    transition: all 0.3s ease;
+}
+
+.hero-content a:hover {
+    font-weight: 700;
+}
+
 .hero-social-links {
     margin-bottom: 24px;
     z-index: 2;
