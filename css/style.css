@@ -268,7 +268,7 @@ p {
 .overlay-nav .nav-links a {
     font-weight: 400;
     transition: all 0.3s ease, font-weight 0.1s ease;
-    min-width: 120px;
+    min-width: 300px;
     text-align: left;
 }
 
