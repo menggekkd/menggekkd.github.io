@@ -88,13 +88,14 @@ html {
 .privacy-nav a {
     color: #aaa;
     text-decoration: none;
-    transition: color 0.3s;
+    transition: all 0.3s;
     display: inline-block;
     position: relative;
 }
 
 .privacy-nav a:hover {
-    color: #fff;
+    color: #eee;
+    font-weight: 700;
 }
 
 @media (max-width: 800px) {
