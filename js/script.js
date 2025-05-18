@@ -1,7 +1,7 @@
 // 动态加载组件到指定的 DOM 元素
 async function loadComponent(id, file) {
     try {
-        const response = await fetch(`block/${file}`);
+        const response = await fetch(`/block/${file}`);
         if (!response.ok) {
             throw new Error(`HTTP error! status: ${response.status}`);
         }
