@@ -46,21 +46,26 @@ document.querySelectorAll(".fade-compare-container").forEach(container => {
 document.addEventListener("DOMContentLoaded", () => {
   const containers = document.querySelectorAll(".fade-compare-container");
 
-      containers.forEach(container => {
-        const slider = container.querySelector(".fade-slider");
-        const label = container.querySelector(".fade-text");
+  containers.forEach(container => {
+    const slider = container.querySelector(".fade-slider");
+    const label = container.querySelector(".fade-text");
+    const images = container.querySelectorAll(".fade-img");
 
-        slider.addEventListener("input", () => {
-            const value = slider.value;
+    if (images.length === 0) return;
 
-            // all text
-            if (value > 65) {
-                label.textContent = "Render";
-            } else if (value > 35) {
-                label.textContent = "Model";
-            } else {
-                label.textContent = "Line";
-            }
-        });
+    const total = images.length;
+    const step = 100 / total;
+
+    slider.addEventListener("input", () => {
+      const value = +slider.value;
+
+      let index = Math.floor(value / step);
+      if (index >= total) index = total - 1;
+
+      const newLabel = images[index].dataset.label || "";
+      label.textContent = newLabel;
     });
+
+    slider.dispatchEvent(new Event("input"));
+  });
 });
