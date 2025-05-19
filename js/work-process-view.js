@@ -2,17 +2,26 @@ const sliders = document.querySelectorAll(".fade-slider");
 
 sliders.forEach(slider => {
     const container = slider.closest(".fade-compare-container");
-    const image1 = container.querySelector(".fade-before");
-    const image2 = container.querySelector(".fade-after");
-    // more image
+    const images = container.querySelectorAll(".fade-img"); 
 
-    slider.addEventListener("input", function () {
-    const value = this.value;
-    // first image
-    image1.style.opacity = 1;
-    image2.style.opacity = value / 100;
-    
-        // slider background
+    const step = 100 / (images.length - 1);
+
+        slider.addEventListener("input", function () {
+        const value = this.value;
+
+        images.forEach((img, index) => {
+        const min = step * (index - 1);
+        const max = step * index;
+
+        if (value < min) {
+            img.style.opacity = 0;
+        } else if (value >= min && value <= max) {
+            img.style.opacity = (value - min) / step;
+        } else {
+            img.style.opacity = 1;
+        }
+    });
+
         slider.style.backgroundPosition = `${(100 - value)}% 0`;
     });
 });
@@ -45,10 +54,12 @@ document.addEventListener("DOMContentLoaded", () => {
             const value = slider.value;
 
             // all text
-            if (value > 50) {
+            if (value > 65) {
                 label.textContent = "Render";
-            } else {
+            } else if (value > 35) {
                 label.textContent = "Model";
+            } else {
+                label.textContent = "Line";
             }
         });
     });
