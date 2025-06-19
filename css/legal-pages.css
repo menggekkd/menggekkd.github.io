@@ -116,6 +116,49 @@ html {
     font-weight: 700;
 }
 
+ol {
+    padding-left: 18px;
+    margin-top: 24px;
+}
+
+details {
+    background: #151515;
+    padding: 16px;
+    border-radius: 8px;
+    margin-top: 24px;
+    margin-bottom: 24px;
+    max-width: auto;
+}
+
+summary {
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: 700;
+    list-style: none;
+}
+
+summary::-webkit-details-marker {
+    display: none;
+}
+
+.arrow {
+    display: inline-block;
+    transition: transform 0.3s ease;
+    margin-left: 4px;
+    margin-right: 12px;
+    font-size: 12px;
+}
+
+details[open] .arrow {
+  transform: rotate(90deg);
+}
+
+pre {
+    margin-left: 32px;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+
 @media (max-width: 800px) {
     .legal-pages-nav {
         display: none;
