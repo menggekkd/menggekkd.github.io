@@ -150,7 +150,7 @@ summary::-webkit-details-marker {
 }
 
 details[open] .arrow {
-  transform: rotate(90deg);
+    transform: rotate(90deg);
 }
 
 pre {
