@@ -6,7 +6,7 @@
 
 :root {
     --glass-blur: 20px;
-    --glass-bg: #0f0f0faa;
+    --glass-bg: #000000aa;
     --glass-border: #aaaaaa50;
     --glass-radius: 8px;
     --font-size: 20px;
@@ -20,7 +20,7 @@
     --transition-speed: 0.3s;
     --box-shadow: 0 4px 16px #00000033;
     --header-gradient: linear-gradient(#000000aa);
-    --btn-gradient: linear-gradient(#0f0f0f50);
+    --btn-gradient: linear-gradient(#101015aa);
 }
 
 body {
@@ -85,7 +85,6 @@ p {
     right: 0;
     backdrop-filter: blur(var(--glass-blur));
     background: var(--header-gradient);
-    border-bottom: 1px solid var(--glass-border);
     height: var(--header-height);
     z-index: 1000;
     box-shadow: 0 4px 16px #00000033;
@@ -176,7 +175,6 @@ p {
     top: 12px;
     left: 10px;
     background-color: var(--glass-bg);
-    border: 1px solid var(--glass-border);
     border-radius: var(--glass-radius);
     padding: 10px 0;
     flex-direction: column;
@@ -363,7 +361,7 @@ p {
 .support-btn {
     background: var(--btn-gradient);
     color: var(--text-color);
-    border: 1px solid var(--glass-border);
+    border: 0px solid var(--glass-border);
     border-radius: var(--glass-radius);
     padding: 12px 16px;
     border-radius: 8px;
