@@ -31,7 +31,7 @@
 
 ## Notes
 
-This website was built with AI assistance (ChatGPT, Copilot) during development. (I was desperately fixing bugs everywhere... AHHHHH...)
+This website was built with AI assistance (ChatGPT, Copilot) during development. (Don't think AI can generate this whole complete website out directly in one step, this website project is after many debugging and modification to present this effect.)
 
 ## License & Copyright
 
@@ -75,7 +75,7 @@ If there’s any infringement or missing attributions, please contact for correc
 
 ## 备注
 
-该网站使用了 AI（ChatGPT、Copilot） 辅助制作。（我就在那疯狂地修Bug啊啊啊…）
+该网站使用了 AI（ChatGPT、Copilot） 辅助制作。（不要想着AI能一步到位直接生成出这个整个完整的网站出来，本网站项目是经过了多次调试和修改后才会呈现出这样的效果。）
 
 ## 版权声明
 
