@@ -155,6 +155,7 @@ details[open] .arrow {
 
 pre {
     margin-left: 32px;
+    margin-right: 40px;
     white-space: pre-wrap;
     word-wrap: break-word;
 }
@@ -164,3 +165,4 @@ pre {
         display: none;
     }
 }
+
